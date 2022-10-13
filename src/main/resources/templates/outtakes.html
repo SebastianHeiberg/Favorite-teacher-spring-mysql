@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="schemas">
+    <section class="info">
+        <div class="try1"> Name of student</div>
+        <div th:each="person : ${persons}">
+            <span class="try1" th:text="${person.name}"/>
+        </div>
+    </section>
+    <section class="info">
+        <div class="try1"> favorite teacher</div>
+        <div th:each="person : ${persons}">
+            <span class="try1" th:text="${person.favTeach}"/>
+        </div>
+    </section>
+</section>
+
+</body>
+</html>

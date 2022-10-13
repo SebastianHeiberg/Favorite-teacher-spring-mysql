@@ -1,0 +1,32 @@
+header {
+    background-color: green;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnCreate{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+

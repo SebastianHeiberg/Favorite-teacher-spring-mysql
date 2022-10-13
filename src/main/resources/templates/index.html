@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Front page</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+<header>
+    <h1>The complete list of students and their favorite teachers</h1>
+</header>
+
+
+<table>
+    <tr>
+        <th>Student name</th>
+        <th>Favorite teacher</th>
+        <th>Options</th>
+    </tr>
+    <tr th:each="person : ${persons}">
+        <td  th:text="${person.name}"/>
+        <td  th:text="${person.favTeach}"/>
+        <td class="options">
+            <form method="get" th:action="@{'/delete/' + ${person.id}}">
+                <button type="submit"> Delete row</button>
+            </form>
+            <form method="get" th:action="@{'/update/' + ${person.id}}">
+                <button type="submit"> update info</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div class="btnCreate">
+    <form method="get" action="/create">
+        <input type="submit" value="Register new student"/>
+    </form>
+</div>
+</body>
+</html>
